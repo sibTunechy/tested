@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { links } from "./data";
 import pic from "./pic.jpg";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [showLinks, setShowLinks] = useState(false);
@@ -14,7 +15,9 @@ function Navbar() {
       </div>
       <div className="nav-center">
         <div className="nav-header">
-          <img src={logo} className="logo" alt="logo" />
+          <Link to='/'>
+          <img src={logo} className="logo" alt="logo"/>
+          </Link>
           <button
             className="nav-toggle"
             onClick={() => setShowLinks(!showLinks)}
@@ -28,14 +31,19 @@ function Navbar() {
           }
         >
           <ul className="links">
-            {links.map((link) => {
-              const { id, url, text } = link;
-              return (
-                <li key={id}>
-                  <a href={url}>{text}</a>
-                </li>
-              );
-            })}
+            <Link to= '/news'>
+            </Link>
+            
+              {links.map((link) => {
+                const { id, url, text } = link;
+                return (
+                  <li key={id}>
+                    <Link to="/video"></Link>
+                    <a href={url}>{text}</a>
+                  </li>
+                );
+              })}
+            
           </ul>
         </div>
       </div>

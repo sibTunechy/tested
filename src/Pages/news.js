@@ -1,5 +1,5 @@
 import React from "react";
-import { news } from "./data";
+import { news } from "../data";
 
 function News() {
   return (

@@ -1,18 +1,30 @@
-import News from "./news";
+import { BrowserRouter as Router, Route, Switch  } from 'react-router-dom';
+import News from "./Pages/news";
 import Navbar from "./navbar";
-import Audio from "./audio";
-import Video from "./video";
-import Ads from "./ads";
-import Footer from "./footer";
+import Audio from "./Pages/audio";
+import Video from "./Pages/video";
+import Error from "./error";
+// import Footer from "./footer";
+
 function App() {
   return (
     <>
+    <Router>
       <Navbar />
-      <Audio />
-      <News />
-      <Video />
-      <Ads />
-      <Footer />
+      <Switch>
+        <Route exact path="/" component={Audio}/>
+          
+        <Route  path="/news" component={News}/>
+          
+        <Route path="/video" component={Video}/>
+        
+        <Route path="*">
+          <Error />
+        </Route>
+
+      {/* <Footer /> */}
+      </Switch>
+    </Router>  
     </>
   );
 }

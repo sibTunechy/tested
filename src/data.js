@@ -6,19 +6,19 @@ export const links = [
   },
   {
     id: 2,
-    url: "/about",
-    text: "List of programs",
+    url: "/news",
+    text: "News",
   },
   {
     id: 3,
-    url: "/projects",
-    text: "How to listen",
+    url: "/video",
+    text: "Videos",
   },
-  {
-    id: 4,
-    url: "/contact",
-    text: "Schedule",
-  },
+  // {
+  //   id: 4,
+  //   url: "/contact",
+  //   text: "Schedule",
+  // },
 ];
 export const url = [
   {

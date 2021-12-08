@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ReactPlayer from "react-player";
-import { url } from "./data";
+import { url } from "../data";
 // import Axios from "axios";
 
 function Video() {
